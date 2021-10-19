@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dokumentasjon</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--CSS-->
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!--Boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--Mine script-->
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+  <div class="sidebar" id="mySidebar">
+    <a id="logo" href="index.html"><img src="bilder/interact.png" alt="" width="100%" style="max-width: 250px; max-height: 70px"></a>
+    <a id="sokefelt"><form class="example" action="action_page.php">
+      <input type="text" placeholder="Søk" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </a>
+    <a class="active" href="index.html">Intro</a>
+    <a href="variabler.html">Variabler</a>
+    <a href="betingelser.html">Betingelser</a>
+    <a href="lokker.html">Løkker</a>
+    <a href="rutiner.html">Rutiner</a>
+    <a href="operatorer.html">Operatorer og andre basis systemfunksjoner</a>
+    <a href="array.html">Arrayer og indekser</a>
+    <a href="dato.html">Datoer</a>
+    <a href="matematikk.html">Tall og matematikk</a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container-md">
+      <h1 id="overskrift">AScript</h1>
+          <p>AScript er et scriptspråk for å implementere avansert logikk i ACOS Interact. Denne nettsiden gir et overblikk over  viktige rutiner og formler i AScript. I
+            utgangspunktet følger AScript JavaScript-standarden, inkludert JSON-arrayer, men med potensiale for å forkorte og forbedre en del ting.</p> 
+            
+           <h2>Scriptsmuligheter i Interact</h2>
+           <p>I Interact finnes det tre ulike felter hvor det er mulig å legge inn script. I alle feltene må man starte med å skrive =.
+            Så snart man skriver = i tekstboksen, så vises valget <strong>Gå til Editor</strong>.
+            Ved å klikke på <strong>Gå til Editor</strong> presenteres en større og mer avansert visning av området hvor man kan fortsette scriptingen.</p>
+                <h4><strong>Verdiformel</strong></h4>
+                  <li>Brukes til å behandle data.</li>   
+                 <img src="bilder/verdiformel.png" alt="Verdifeilt" class="responsive" style="border:none">
+            
+                 <h4><strong>Aktiveringsscript</strong></h4>
+                  <li>Brukes til å styre synlighet ved hjelp av script</li>  
+                  <li>Gir mer avanserte muligheter i forhold til «ctrl+klikk»</li> 
+                  <p><i>Krav:</i>  et aktiveringsscript må returnere true eller false. <strong>True</strong> synliggjør et element eller steg selv om det er merket som «skjult», mens <strong>False</strong> skjuler et element selv om det normal er synlig.</p>
+                  <img src="bilder/aktivering.png" alt="Verdifeilt" class="responsive" style="border:none">
+                  <h4><strong>Valideringsscript</strong></h4>
+                <li>Lar deg scripte inn egne feilmeldinger</li> 
+                <li>Det er viktig å forstå forskjellen mellom disse scriptmulighetene</li>
+             <p><i>Krav:</i> et valideringsscript må returnere:
+              <li><strong>True</strong> godkjenner valideringen og det kommer ingen feilmelding</li>
+              <li><strong>Teskstreng</strong> viser en tekst når valideringen har feilet</li></p>
+              <img src="bilder/validerings.png" alt="Aktivering og validering" class="responsive" style="border:none">           
+          
+    </div>
+        
+    <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="index.html"><img src="bilder/logo.png" alt="" width="100%" style="max-width: 122.91px; max-height: 251px"></a>
+                  <h3>Hvem er vi?</h3>
+                  <p>ACOS utvikler og implementerer programvare for offentlig og privat sektor. Vi har siden oppstarten hatt en jevn vekst, og er i dag en av Norges ledende IT-leverandører. </p>
+                  <div class="item social"><a href="https://www.facebook.com/acos.no"><i class="fa fa-facebook"></i></a><a href="https://www.linkedin.com/company/acos"><i class="fa fa-linkedin"></i></a></div>  
+              </div>
+                <div class="col-md-3 item text">
+                      <h3>Supportsenter</h3>
+                      <ul>
+                          <li>Telefon: 05921</li>
+                          <li>E-post: support@acos.no</li>
+                          <li>Nettside: <a href="https://www.support.acos.no">www.support.acos.no</a></li>
+                          <li>Man - fre: 08.00 . 16.00</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3 item text">
+                      <h3>Sentralbord</h3>
+                      <ul>
+                          <li>Telefon: 56 32 20 00</li>
+                          <li>E-post: post@acos.no</li>
+                      </ul>
+                  </div>
+              </div>
+              <hr>
+              <p class="copyright">ACOS © 2021</p>
+          </div>
+      </footer>
+  </div>
+
+  </div>
+    
+</body>
+
+</html>
