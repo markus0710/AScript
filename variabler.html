@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dokumentasjon</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--CSS-->
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!--Boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--Mine script-->
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+
+
+
+  <div class="sidebar" id="mySidebar">
+    <a id="logo" href="index.html"><img src="bilder/interact.png" alt="" width="100%" style="max-width: 250px; max-height: 70px"></a>
+    <a id="sokefelt"><form class="example" action="action_page.php">
+      <input type="text" placeholder="Søk" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </a>
+    <a href="index.html">Intro</a>
+    <a class="active" href="variabler.html">Variabler</a>
+    <a href="betingelser.html">Betingelser</a>
+    <a href="lokker.html">Løkker</a>
+    <a href="rutiner.html">Rutiner</a>
+    <a href="operatorer.html">Operatorer og andre basis systemfunksjoner</a>
+    <a href="array.html">Arrayer og indekser</a>
+    <a href="dato.html">Datoer</a>
+    <a href="matematikk.html">Tall og matematikk</a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="container-sm pt-3" style="padding-bottom: 50px;">
+      <div id ="variabler">
+        <h1 id="overskrift">Variabler</h1>
+      <p>En variabel endrer seg, det ligger i navnet - den er variabel.
+        Variabler er plassholdere for verdier som kan endre verdi, og verdien av variabelen kan for eksempel være tall, tekst eller sann/usann.
+        Formålet med variabler er at Interact og AScript skal huske data til bruk senere, f.eks. til utregninger, beslutninger og for å gjøre endringer på informasjon.
+      </p>
+      <p>En variebl i AScript ser slik ut:</p>
+      <div id = "kodeboks" class ="container-sm">
+        <div class="row">
+            <div class="col-sm-10">
+                <code id="kode1">var variabelNavn;</code>
+            </div>
+            <div class="col-sm-2">
+                    <button onclick="copyToClipboard('#kode1')" type="button" class="btn" id="kode-knapp"><img src="bilder/copy.png" style="width: 19px;" alt="Kopier"></button>
+            </div>
+        </div>
+      </div>
+
+      <p><code>var</code> forteller AScript at <strong>variabelNavn</strong> er en variabel. Den har imidlertid ikke fått en verdi enda.</p>
+     
+       <p> Som nevnt innledningsvis kan verdien av en variabel være tall, tekst eller sann/usann:</p>
+        <div id = "kodeboks" class ="container-sm">
+          <div class="row">
+              <div class="col-sm-10">
+                  <code id="kode2">var tall = 9;<br>var tekst = "Dette er en tekst";</code>
+              </div>
+              <div class="col-sm-2">
+                      <button onclick="copyToClipboard('#kode2')" type="button" class="btn" id="kode-knapp"><img src="bilder/copy.png" style="width: 19px;" alt="Kopier"></button>
+              </div>
+          </div>
+        </div>
+        <p>Et likhetstegn (=) brukes til å tilordne verdier til variabler. Tekst må alltid skrives i mellom to anførselstegn ("").</p>
+        <div class = "alert alert-info">
+          <img src="bilder/light.png" alt="" style="width: 50px;">
+          <p>Ved etablering av flere variabler, avsluttes hver linje i AScript med <code>;</code>.</p>
+      </div> 
+        <h2>Variabeltyper</h2>
+        <p>Under vises en liste over datatypene i AScript. Kolonnen til høyre viser eksempler på hvordan disse variablene settes.</p>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Forklaring</th>
+              <th>Eksempel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Streng</td>
+              <td>En streng (eller en tekststreng) er tekst, og blir skrevet med anførselstegn.</td>
+              <td><code>var bil = "Volvo"</code></td>
+            </tr>
+            <tr>
+              <td>Tall</td>
+              <td>Tall, med eller uten desimal, positive og negative. Skrives uten anførselstegn</td>
+              <td><code>var pris = 450 000</code></td>
+            </tr>
+            <tr>
+              <td>Boolean</td>
+              <td>Brukes ofte ved betingelser og har to verdier: <code>true</code> eller <code>false</code> (ja/nei). Trenger ikke anførselstegn. </td>
+              <td><code>var salg = true;</code></td>
+            </tr>
+            <tr>
+              <td>Array</td>
+              <td>Liste med verider. Skrives med hakepararanteser (klammer) og skilles med komma. <br> Verdiene i dette eksempelet skrives med anførselstegn da det er tekstverider.</td>
+              <td><code>var liste = ["BMW", "Audi", "Ford"];</code></td>
+            </tr>
+            <tr>
+              <td>Objekt</td>
+              <td>Objekter er variabler som kan inneholde elementer med flere verdier.<br>I dette eksempelet er objektet bil av merket "Audi", er av fargen "Blå" og har 500 hestekrefter.</td>
+              <td><code> var bil = { <br>
+                "merke": "Audi", <br>
+                "farge": "Blå", <br>
+                "hestekrefter": 500		
+                };</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="eksempel">
+          <h2>Eksempel: Sammenslåing av tekstvariabler</h2>
+          <p>I dette eksempelet ønsker vi å slå sammen to variabler bestående av tekst.</p>
+          <div id = "kodeboks" class ="container-sm">
+            <div class="row">
+                <div class="col-sm-10">
+                    <code id="kode3">var forNavn = "Ola";<br>var etterNavn = "Normann";<br><br>return forNavn + " " + etterNavn;</code>
+                </div>
+                <div class="col-sm-2">
+                        <button onclick="copyToClipboard('#kode3')" type="button" class="btn" id="kode-knapp"><img src="bilder/copy.png" style="width: 19px;" alt="Utklippstavle"></span></button>
+                </div>
+            </div>
+          </div>
+          <strong>Forklaring</strong>
+          <ol>
+            <li>Definerer variablene <strong>forNavn</strong> og <strong>etterNavn</strong>.</li>
+            <li>Benytter <code>return</code> for å returnere verdier.</li>
+            <li>Bygger en ny tekststreng bestående av variabelen <strong>forNavn</strong>, <strong>" "</strong> (blir visende som et mellomrom) og <strong>etterNavn</strong>.</li>
+          </ol>
+          <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#resultat1">Resultat <i id ="pil" class="fa fa-caret-down"></i></button>
+          <div id="resultat1" class="collapse">
+            <div class="resultatBoks">
+            <strong>Navn</strong> 
+            <div class="resultatFelt">
+              Ola Normann
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="eksempel">
+          <h2>Eksempel: Summering av variabler</h2>
+          <p>I dette eksempelet ønsker vi å summere sammen to variabler bestående av tall.</p>
+          <div id = "kodeboks" class ="container-sm">
+            <div class="row">
+                <div class="col-sm-10">
+                    <code id="kode3">var tall = 9;<br>var tall2 = tall + 1; <br>var sum = tall + tall2;<br><br>return sum;</code>
+                </div>
+                <div class="col-sm-2">
+                        <button onclick="copyToClipboard('#kode3')" type="button" class="btn" id="kode-knapp"><img src="bilder/copy.png" style="width: 19px;" alt="Utklippstavle"></button>
+                </div>
+            </div>
+          </div>
+          <strong>Forklaring</strong>
+          <ol>
+            <li>Definerer variablene <strong>tall</strong> og <strong>tall2</strong>.</li>
+            <li><strong>tall2</strong> får verdien til <strong>tall</strong> pluss 1.</li>
+            <li>Definerer variabelen <strong>sum</strong> som får verdien til summen av <strong>tall</strong> og <strong>tall2</strong>.</li>
+            <li>Benytter <code>return</code> for å returnere verdien til <strong>sum</strong>.</li>
+          </ol>
+          <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#resultat2">Resultat <i id ="pil" class="fa fa-caret-down"></i></button>
+          <div id="resultat2" class="collapse">
+            <div class="resultatBoks">
+              <strong>Sum</strong> 
+              <div class="resultatFelt">19</div>
+            </div>
+          </div>
+        </div>
+        <div class="eksempel">
+          <h3 id = "ovserkrift2">Eksempel: Sammenslåing av tekst og tall</h4>
+            <p style="color: red;">her kommer det et eksempel på sammenslåign av tekst og tall</p>
+        </div>
+        <h2>Lokale variabler</h2>
+        <ul>
+          <li>Tekstfelter</li>
+          <li>Radioknapper</li>
+          <li>Nedtrekksliste</li>
+        </ul>
+        <p>Alle elementer i interact vil få et "variabelnavn" når de opprettes. Dette er det navnet som må henvises til når man ønsker å bruke verdier fra et annet element.</p>
+        <h3 id="overskrift2">Eksempel</h3>
+        <p>Dersom du har et tekstfelt med en verdi og du ønsker å bruke denne i et script. Kan du CTRL-klikke på feltet mens du står inne i verdiformel-feltet.</p>
+        <p>Vis bilder....</p>
+
+        <h3 id="overskrift2">Eksempel: Array</h3>
+        <p>Vis eksempler på hvordan man henter ut ting fra lister. Vis også bilder av en tabell for å forenkle listen.</p>
+        <p>Legg-til-liste eksempel</p>
+        <p>Sjekkboksliste - eksempel</p>
+        <h2>Globale variabler</h2>
+        <ul>
+          <li>Data som hentes fra eksterne kilder:</li>
+        </ul>
+
+      </div>
+    </div>
+
+
+    <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="index.html"><img src="bilder/logo.png" alt="" width="100%" style="max-width: 122.91px; max-height: 251px"></a>
+                  <h3>Hvem er vi?</h3>
+                  <p>ACOS utvikler og implementerer programvare for offentlig og privat sektor. Vi har siden oppstarten hatt en jevn vekst, og er i dag en av Norges ledende IT-leverandører. </p>
+                  <div class="item social"><a href="https://www.facebook.com/acos.no"><i class="fa fa-facebook"></i></a><a href="https://www.linkedin.com/company/acos"><i class="fa fa-linkedin"></i></a></div>  
+              </div>
+                <div class="col-md-3 item text">
+                      <h3>Supportsenter</h3>
+                      <ul>
+                          <li>Telefon: 05921</li>
+                          <li>E-post: support@acos.no</li>
+                          <li>Nettside: <a href="https://www.support.acos.no">www.support.acos.no</a></li>
+                          <li>Man - fre: 08.00 . 16.00</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3 item text">
+                      <h3>Sentralbord</h3>
+                      <ul>
+                          <li>Telefon: 56 32 20 00</li>
+                          <li>E-post: post@acos.no</li>
+                      </ul>
+                  </div>
+              </div>
+              <hr>
+              <p class="copyright">ACOS © 2021</p>
+          </div>
+      </footer>
+  </div>
+
+
+  </div>
+    
+</body>
+
+</html>
